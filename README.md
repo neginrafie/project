@@ -41,12 +41,14 @@ Crud.py
 
 
 __init__.py
- 
+ ![image](https://github.com/user-attachments/assets/4ce920cf-da4a-4a7d-bc0c-403543456c8a)
+
 
 این ماژول خالی است و برای تشکیل یک پکیج ایجاد میشود
 
 
 database.py
+![image](https://github.com/user-attachments/assets/70233fdf-8a37-4eba-89b3-cffb61f18e78)
  
 در این ماژول ادرس دیتا بیس مشخص میشود در خط اول
 Create_engin 
@@ -59,6 +61,7 @@ Declaractive_base
 
 
 Models.py
+![image](https://github.com/user-attachments/assets/c9e20c40-7ae0-472f-84e9-10a1ab2f8e02)
 
  
 
@@ -69,6 +72,7 @@ Base(obj of declaractive_base)
 هر خط از این جدول یک ستون را در جدول دیتا بیس تشکیل میشود
 
 Schsmas.py
+![image](https://github.com/user-attachments/assets/54bb799f-c0ae-4d30-8eb7-fb93668ce903)
  
 
 در این ماژول نوع دیتا های ورودی بررسی میشود 
@@ -78,6 +82,7 @@ Basemodel
 
 
 Crud.py
+![image](https://github.com/user-attachments/assets/5ddc1e66-9a19-4370-b622-2947f7da550f)
  
 در این ماژول توابعی برای ساخت جداول حذف اپدیت کردن و خواندن اطلاعات برای هر سه جدول مورد نظر ساخته شده است
 
@@ -85,6 +90,7 @@ Crud.py
 
 
 Dependencies.py
+![image](https://github.com/user-attachments/assets/4d8c5a19-3961-4abd-8ed3-21cb2e7438d6)
 
 در این ماژول تنها یک تابع وجود دارد که تمام 
 db 
@@ -122,6 +128,7 @@ Apirouter
 را از 
 Fastapi
 ایمپورت میکنیم و از ان یک شی میسازیم
+![image](https://github.com/user-attachments/assets/c9592c52-4d62-43e2-bfe4-0f09851cf741)
 
  
 
@@ -156,6 +163,7 @@ Create_course
 مراحل ذکر شده را در ماژول های 
 Student and Professor
 برای جدول های دانشجو و استاد تکرار میکنیم
+![image](https://github.com/user-attachments/assets/8ddedb5d-5b51-4e35-bdfd-0c03c6607fbd)
 
  با استفاده از شی ساخته شده با کمک متود 
 Get 
@@ -185,7 +193,8 @@ Id
 مراحل ذکر شده را در ماژول های 
 Student and Professor
 برای جدول های دانشجو و استاد تکرار میکنیم
- 
+ ![image](https://github.com/user-attachments/assets/db9dda1e-9a36-4397-80f2-fd9b6cce5546)
+
 با استفاده از شی ساخته شده و به کمک متود 
 Delete
 یک 
@@ -218,6 +227,7 @@ Id and db
 مراحل قبل را در ماژول های 
 Professor , student
 برای جداول دانشجو و استاد تکرار میکنیم
+![image](https://github.com/user-attachments/assets/9f294036-0655-4534-9bbc-fae3217ffc6c)
  
 با استفاده از شی ساخته شده و به کمک متود 
 Put 
@@ -274,19 +284,18 @@ Validation.py
 
 
 Docerfile:
-FROM   python:latest
+FROM python:latest
 
-WORKDIR /src
+WORKDIR /SRC
 
+COPY ./requirements.txt /SRC
 
-COPY ./requrements.txt/src
-
-
-RUN pip install -r requrements.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD ["uvicorn","main.py:app","--host","8000"]
+ENV PYTHONPATH=/SRC  
+CMD ["python3", "main.py"]
 
 
 در نهایت ماژول داکر فایل را ایجاد میکنیم و در ان دستورات زیر را مینویسیم
@@ -304,6 +313,7 @@ Run
 دستور ذکر شده را اجرا میکند
 دیرکتوری فعلی را در دایرکتوری ساخته شده ذخیره میکند و در نهایت خط اخر اجرا میشود
 
+![image](https://github.com/user-attachments/assets/0372734d-611b-4633-b1cc-491ec15b0208)
 
 
   
